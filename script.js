@@ -180,7 +180,7 @@ let selectedObject = null;
 
                 if (intersect && intersect.object) {
                     selectedObject = intersect.object;
-                    intersect.object.material.color.set('#55CDFC');
+                    intersect.object.material.color.set('hotpink');
                 }
             }
         };
