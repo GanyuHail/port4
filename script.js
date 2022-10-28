@@ -51,7 +51,7 @@ let selectedObject = null;
         geometry = new THREE.Geometry();
         particleCount = 9001;
 
-        const sphereGeometry = new THREE.SphereGeometry(85, 64, 32);
+        const sphereGeometry = new THREE.SphereGeometry(90, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -84,14 +84,21 @@ let selectedObject = null;
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
         scene.add(sphereMesh5);
-        sphereMesh5.position.set(220, 75, -100);
+        sphereMesh5.position.set(220, 125, -100);
 
         const sphereGeometry6 = new THREE.SphereGeometry(30, 64, 32);
         const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mesmo.png');
         const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
         const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
         scene.add(sphereMesh6);
-        sphereMesh6.position.set(250, 105, -110);
+        sphereMesh6.position.set(250, 155, -110);
+
+        const sphereGeometry7 = new THREE.SphereGeometry(60, 64, 32);
+        const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
+        const sphereMaterial7 = new THREE.MeshStandardMaterial({ map: sphereTex7 });
+        const sphereMesh7 = new THREE.Mesh(sphereGeometry7, sphereMaterial7);
+        scene.add(sphereMesh7);
+        sphereMesh7.position.set(200, -20, -70);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -191,6 +198,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/enate/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
+            } else if (selectedObject === sphereMesh7) {
+                window.location.href = "https://ganyuhail.github.io/port3c/index.html";
             }
         };
 
@@ -207,6 +216,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/enate/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
+            } else if (selectedObject === sphereMesh7) {
+                window.location.href = "https://ganyuhail.github.io/port3c/index.html";
             }
         };
     }
