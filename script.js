@@ -162,6 +162,7 @@ let selectedObject = null;
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
+        document.addEventListener('touchend', onDocumentTouchEnd, false);
 
         const raycaster = new THREE.Raycaster();
         const pointer = new THREE.Vector2();
@@ -280,6 +281,11 @@ let selectedObject = null;
             e.preventDefault();
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
+        }
+    }
+    function onDocumentTouchEnd(e) { 
+        if(e.touches.length === 0) {
+        let selectedObject = null;
         }
     }
 
