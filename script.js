@@ -101,7 +101,7 @@ let selectedObject = null;
         sphereMesh7.position.set(200, -20, -70);
 
         const sphereGeometry8 = new THREE.SphereGeometry(50, 64, 32);
-        const sphereTex8 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
+        const sphereTex8 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
         const sphereMaterial8 = new THREE.MeshStandardMaterial({ map: sphereTex8 });
         const sphereMesh8 = new THREE.Mesh(sphereGeometry8, sphereMaterial8);
         scene.add(sphereMesh8);
@@ -207,6 +207,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
                 window.location.href = "https://ganyuhail.github.io/port3c/index.html";
+            } else if (selectedObject === sphereMesh8) {
+                window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
         };
 
@@ -225,6 +227,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
                 window.location.href = "https://ganyuhail.github.io/port3c/index.html";
+            } else if (selectedObject === sphereMesh8) {
+                window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
         };
     }
