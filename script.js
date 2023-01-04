@@ -27,10 +27,11 @@ let selectedObject = null;
 
         fieldOfView = 75;
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 25;
+        nearPlane = 100;
         farPlane = 3000;
 
         cameraZ = farPlane / 2;
+
         fogHex = 0x000000;
         fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
@@ -79,7 +80,7 @@ let selectedObject = null;
         scene.add(sphereMesh4);
         sphereMesh4.position.set(-100, 130, 90);
 
-        const sphereGeometry5 = new THREE.SphereGeometry(30, 64, 32);
+        const sphereGeometry5 = new THREE.SphereGeometry(50, 64, 32);
         const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/loadinglogo%20(1).png');
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
@@ -203,7 +204,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
-                 window.location.href = "https://oestrogeneration.org/";
+                 window.location.href = "https://landing.oestrogeneration.org/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
@@ -223,7 +224,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
-                window.location.href = "https://oestrogeneration.org/";
+                window.location.href = "https://landing.oestrogeneration.org/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
@@ -244,7 +245,7 @@ let selectedObject = null;
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        camera.position.z += (mouseY - camera.position.z) * 0.001;
+        camera.position.z += (mouseY - camera.position.z) * 0.002;
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
