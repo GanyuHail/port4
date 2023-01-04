@@ -67,7 +67,7 @@ let selectedObject = null;
         sphereMesh2.position.set(-50, 100, 50);
 
         const sphereGeometry3 = new THREE.SphereGeometry(24, 64, 32);
-        const sphereTex3 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/universe.png');
+        const sphereTex3 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/ripple.png');
         const sphereMaterial3 = new THREE.MeshStandardMaterial({ map: sphereTex3 });
         const sphereMesh3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
         scene.add(sphereMesh3);
@@ -200,7 +200,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
-                window.location.href = "https://ganyuhail.github.io/3dArt/";
+                window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
@@ -220,7 +220,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
-                window.location.href = "https://ganyuhail.github.io/3dArt/";
+                window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
