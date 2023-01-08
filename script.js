@@ -196,7 +196,7 @@ let selectedObject = null;
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "/nb";
+                window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
@@ -214,9 +214,9 @@ let selectedObject = null;
             }
         };
 
-        function touchEnd(event) {
+        function touchStart(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "/nb";
+                window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
@@ -284,7 +284,7 @@ let selectedObject = null;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
     }
-    function onDocumentTouchEnd(e) { 
+    function onDocumentTouchStart(e) { 
         if(e.touches.length === 0) {
         let selectedObject = null;
         }
