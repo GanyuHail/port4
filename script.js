@@ -27,7 +27,7 @@ let selectedObject = null;
 
         fieldOfView = 75;
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 100;
+        nearPlane = 20;
         farPlane = 3000;
 
         cameraZ = farPlane / 2;
