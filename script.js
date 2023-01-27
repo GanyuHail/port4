@@ -161,9 +161,10 @@ let selectedObject = null;
         container.appendChild(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
         document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.addEventListener('touchstart', onDocumentTouchStart, false);
+        // document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        // document.addEventListener('touchend', onDocumentTouchEnd, false);
+        document.addEventListener('touchend', onDocumentTouchEnd, false);
+        // document.addEventListener('touchcancel', onDocumentTouchCancel, false);
 
         const raycaster = new THREE.Raycaster();
         const pointer = new THREE.Vector2();
@@ -171,7 +172,8 @@ let selectedObject = null;
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
         window.addEventListener('touchend', touchEnd);
-        window.addEventListener('touchstart', touchStart);
+        // window.addEventListener('touchcancel', touchCancel);
+        // window.addEventListener('touchstart', touchStart);
 
         function onPointerMove(event) {
             if (selectedObject) {
@@ -209,13 +211,13 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
-                myFunction();
+                window.location.href = "https://ganyuhail.github.io/port3c/cv.html";
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
         };
 
-        function touchStart(event) {
+        function touchEnd(event) {
             if (selectedObject === sphereMesh) {
                 window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh2) {
@@ -235,10 +237,15 @@ let selectedObject = null;
             }
         };
 
-        function touchEnd(event) {
-            selectedObject = null;
-        }
+        // function touchCancel(event) {
+        //     selectedObject = null;
+        // }
     }
+
+    //     function touchEnd(event) {
+    //         selectedObject = null;
+    //     }
+    // }
 
     function animate() {
         requestAnimationFrame(animate);
@@ -274,9 +281,9 @@ let selectedObject = null;
         mouseY = e.clientY - windowHalfY;
     }
 
-    function onDocumentTouchStart(e) {
+    function onDocumentTouchEnd(e) {
         if (e.touches.length === 1) {
-            e.preventDefault();
+            {passive:false}
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
@@ -285,14 +292,15 @@ let selectedObject = null;
     function onDocumentTouchMove(e) {
         if (e.touches.length === 1) {
             e.preventDefault();
+            {passive:false}
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
     }
 
-    function onDocumentTouchEnd(e) {
-        selectedObject = null;
-    }
+    // function onDocumentTouchEnd(e) {
+    //     selectedObject = null;
+    // }
 
     function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
