@@ -209,7 +209,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
-                myFunction();
+                window.location.href = "https://ganyuhail.github.io/port3c/index.html";
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
