@@ -170,7 +170,7 @@ let selectedObject = null;
 
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
-        // window.addEventListener('touchend', touchEnd);
+        window.addEventListener('touchend', touchEnd);
         window.addEventListener('touchstart', touchStart);
 
         function onPointerMove(event) {
@@ -205,7 +205,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
-                 window.location.href = "https://landing.oestrogeneration.org/";
+                window.location.href = "https://landing.oestrogeneration.org/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
@@ -235,25 +235,9 @@ let selectedObject = null;
             }
         };
 
-        // function touchEnd(event) {
-        //     if (selectedObject === sphereMesh) {
-        //         window.location.href = "https://ganyuhail.github.io/nb/";
-        //     } else if (selectedObject === sphereMesh2) {
-        //         window.location.href = "https://ganyuhail.github.io/bl3/";
-        //     } else if (selectedObject === sphereMesh3) {
-        //         window.location.href = "https://ganyuhail.github.io/ripple/";
-        //     } else if (selectedObject === sphereMesh4) {
-        //         window.location.href = "https://www.instagram.com/hennohail/?hl=en";
-        //     } else if (selectedObject === sphereMesh5) {
-        //         window.location.href = "https://landing.oestrogeneration.org/";
-        //     } else if (selectedObject === sphereMesh6) {
-        //         window.location.href = "https://ganyuhail.github.io/mesmo1/";
-        //     } else if (selectedObject === sphereMesh7) {
-        //         window.location.href = "https://ganyuhail.github.io/port3c/cv.html";
-        //     } else if (selectedObject === sphereMesh8) {
-        //         window.location.href = "https://ganyuhail.github.io/paintlines2/";
-        //     }
-        // };
+        function touchEnd(event) {
+            selectedObject = null;
+        }
     }
 
     function animate() {
@@ -278,7 +262,7 @@ let selectedObject = null;
 
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
-            h = (360 * (color[0] + (time*7)) % 360) / 360;
+            h = (360 * (color[0] + (time * 7)) % 360) / 360;
             materials[i].color.setHSL(h, color[1], color[2]);
         }
 
@@ -306,13 +290,9 @@ let selectedObject = null;
         }
     }
 
-    // function onDocumentTouchEnd(e) {
-    //     if (e.touches.length === 1) {
-    //         e.preventDefault();
-    //         mouseX = e.touches[0].pageX - windowHalfX;
-    //         mouseY = e.touches[0].pageY - windowHalfY;
-    //     }
-    // }
+    function onDocumentTouchEnd(e) {
+        selectedObject = null;
+    }
 
     function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
