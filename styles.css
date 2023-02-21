@@ -4,3 +4,200 @@ html, body {
 	overflow: hidden;
 	position: fixed;
 }
+
+@font-face {
+    font-family: 'sabon';
+    src: url('/port4/src/sabon.ttf');
+}
+
+#panel, .flip {
+	font-family: 'sabon';
+	font-size: 16px;
+	padding: 10px;
+	
+	background-color: transparent;
+	color: white;
+	width: 100%; 
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+/* 
+	margin: auto; */
+  }
+  
+  #panel {
+	display: none;
+  }
+
+  #head {
+	font-weight: bold;
+	font-size: large;
+	font-family: 'PT Serif', serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#work {
+	font-weight: bold;
+	font-family: 'PT Serif', serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#info {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	
+	z-index: 50;
+	display: block;
+	color: #F7A8B8;
+	font-family: 'PT Serif', serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#bottom {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	
+	z-index: 50;
+	display: block;
+	color: #F7A8B8;
+	font-family: 'PT Serif', serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#info2 {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	width: 5000%;
+	z-index: 5;
+	display: block;
+	color: #F7A8B8;
+	overflow-x: auto;
+	overflow-y: auto;
+	/* font-family: 'PT Serif', serif; */
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.bio {
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#plaintext {
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+@media only screen 
+and (max-device-width: 600px)
+{
+	#info {
+		font-size: 14px;
+		font-family: 'PT Serif', serif;
+	}
+	#info2 {
+		font-size: 14px;
+		font-family: 'PT Serif', serif;
+	}
+	#bottom {
+		font-size: 14px;
+		font-family: 'PT Serif', serif;
+	}
+	#head {
+		font-weight: normal;
+		font-size: 17px;
+		font-family: 'PT Serif', serif;
+	}
+	#bio {
+		font-weight: normal;
+		font-size: 14px;
+		font-family: 'PT Serif', serif;
+	}
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #55CDFC;
+	text-decoration: none;
+}
+
+a:hover {
+	color: hotpink;
+	text-decoration: underline;
+}
+
+body {
+	overflow-x: auto;
+	overflow-y: auto;
+	padding: 0;
+	margin: 0;
+}
+
+#viewport {
+	position: auto;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.page-wrapper {
+	padding: 0px;
+	margin: 12px 48px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: calc(100% - 2*48px);
+	word-wrap: break-word;
+	overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.inner-border::-webkit-scrollbar {
+	display: none;
+}
+
+.element::-webkit-scrollbar { width: 0 !important }
+
+.element { overflow: -moz-scrollbars-none; }
+
+.element { -ms-overflow-style: none; }

@@ -211,7 +211,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
-                window.location.href = "https://ganyuhail.github.io/port3c/cv.html";
+                myFunction();
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
@@ -231,7 +231,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
-                window.location.href = "https://ganyuhail.github.io/port3c/cv.html";
+                myFunction();
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
