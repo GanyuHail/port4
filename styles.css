@@ -120,6 +120,7 @@ and (max-device-width: 600px)
 	#info2 {
 		font-size: 14px;
 		font-family: 'PT Serif', serif;
+		width: 100vmin;
 	}
 	#bottom {
 		font-size: 14px;
@@ -129,11 +130,21 @@ and (max-device-width: 600px)
 		font-weight: normal;
 		font-size: 17px;
 		font-family: 'PT Serif', serif;
+		margin-left: 10px; 
 	}
 	#bio {
 		font-weight: normal;
 		font-size: 14px;
 		font-family: 'PT Serif', serif;
+	}
+	#plaintext { 
+		margin-left: 10px; 
+	}
+	#work {
+		margin-left: 10px; 
+	}
+	.bio {
+		margin-left: 10px; 
 	}
 }
 
