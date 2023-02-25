@@ -60,7 +60,7 @@ let selectedObject = null;
         sphereMesh.position.set(80, 50, 200);
 
         const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 32);
-        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
+        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/romance.png');
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
@@ -201,7 +201,7 @@ let selectedObject = null;
             if (selectedObject === sphereMesh) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             } else if (selectedObject === sphereMesh2) {
-                window.location.href = "https://ganyuhail.github.io/bl3/";
+                window.location.href = "https://ganyuhail.github.io/romance/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
@@ -221,7 +221,7 @@ let selectedObject = null;
             if (selectedObject === sphereMesh) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             } else if (selectedObject === sphereMesh2) {
-                window.location.href = "https://ganyuhail.github.io/bl3/";
+                window.location.href = "https://ganyuhail.github.io/romance/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
