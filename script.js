@@ -60,7 +60,7 @@ let selectedObject = null;
         sphereMesh.position.set(80, 50, 200);
 
         const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 32);
-        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/romance.png');
+        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/romance.png');
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
