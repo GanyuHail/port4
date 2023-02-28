@@ -53,7 +53,7 @@ let selectedObject = null;
         particleCount = 9001;
 
         const sphereGeometry = new THREE.SphereGeometry(90, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
@@ -102,7 +102,7 @@ let selectedObject = null;
         sphereMesh7.position.set(200, -20, -70);
 
         const sphereGeometry8 = new THREE.SphereGeometry(50, 64, 32);
-        const sphereTex8 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
+        const sphereTex8 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
         const sphereMaterial8 = new THREE.MeshStandardMaterial({ map: sphereTex8 });
         const sphereMesh8 = new THREE.Mesh(sphereGeometry8, sphereMaterial8);
         scene.add(sphereMesh8);
@@ -199,7 +199,7 @@ let selectedObject = null;
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "https://ganyuhail.github.io/paintlines2/";
+                window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/romance/";
             } else if (selectedObject === sphereMesh3) {
@@ -213,13 +213,13 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh7) {
                 myFunction();
             } else if (selectedObject === sphereMesh8) {
-                window.location.href = "https://ganyuhail.github.io/nb/";
+                window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
         };
 
         function touchEnd(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "https://ganyuhail.github.io/paintlines2/";
+                window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "https://ganyuhail.github.io/romance/";
             } else if (selectedObject === sphereMesh3) {
@@ -233,7 +233,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh7) {
                 myFunction();
             } else if (selectedObject === sphereMesh8) {
-                window.location.href = "https://ganyuhail.github.io/nb/";
+                window.location.href = "https://ganyuhail.github.io/paintlines2/";
             }
         };
 
