@@ -5,13 +5,11 @@ html, body {
 	position: fixed;
 }
 
-@font-face {
-    font-family: 'sabon';
-    src: url('https://www.cufonfonts.com/download/redirect/sabon');
-}
+@import url('https://fonts.googleapis.com/css2?family=Lusitana&display=swap');
+
 
 #panel, .flip {
-	font-family: 'sabon';
+	font-family: 'Lusitana', serif;
 	font-size: 16px;
 	padding: 10px;
 	
@@ -33,7 +31,7 @@ html, body {
   #head {
 	font-weight: bold;
 	font-size: large;
-	font-family: 'PT Serif', serif;
+	font-family: 'Lusitana', serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -42,7 +40,7 @@ html, body {
 
 #work {
 	font-weight: bold;
-	font-family: 'PT Serif', serif;
+	font-family: 'Lusitana', serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -57,7 +55,7 @@ html, body {
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'PT Serif', serif;
+	font-family: 'Lusitana', serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -72,7 +70,7 @@ html, body {
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'PT Serif', serif;
+	font-family: 'Lusitana', serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -115,27 +113,27 @@ and (max-device-width: 600px)
 {
 	#info {
 		font-size: 14px;
-		font-family: 'PT Serif', serif;
+		font-family: 'Lusitana', serif;
 	}
 	#info2 {
 		font-size: 14px;
-		font-family: 'PT Serif', serif;
+		font-family: 'Lusitana', serif;
 		width: 100vmin;
 	}
 	#bottom {
 		font-size: 14px;
-		font-family: 'PT Serif', serif;
+		font-family: 'Lusitana', serif;
 	}
 	#head {
 		font-weight: normal;
 		font-size: 17px;
-		font-family: 'PT Serif', serif;
+		font-family: 'Lusitana', serif;
 		margin-left: 10px; 
 	}
 	#bio {
 		font-weight: normal;
 		font-size: 14px;
-		font-family: 'PT Serif', serif;
+		font-family: 'Lusitana', serif;
 	}
 	#plaintext { 
 		margin-left: 10px; 
