@@ -5,11 +5,8 @@ html, body {
 	position: fixed;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lusitana&display=swap');
-
-
 #panel, .flip {
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	padding: 10px;
 	
@@ -31,7 +28,7 @@ html, body {
   #head {
 	font-weight: bold;
 	font-size: large;
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -40,7 +37,7 @@ html, body {
 
 #work {
 	font-weight: bold;
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -55,7 +52,7 @@ html, body {
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -70,7 +67,7 @@ html, body {
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
@@ -106,7 +103,7 @@ html, body {
 	margin-right: 10%;
 	text-align: justify;
 	text-justify: inter-word;
-	font-family: 'Lusitana', serif;
+	font-family: 'Exo', sans-serif;
 }
 
 @media only screen 
@@ -114,27 +111,27 @@ and (max-device-width: 600px)
 {
 	#info {
 		font-size: 14px;
-		font-family: 'Lusitana', serif;
+		font-family: 'Exo', sans-serif;
 	}
 	#info2 {
 		font-size: 14px;
-		font-family: 'Lusitana', serif;
+		font-family: 'Exo', sans-serif;
 		width: 100vmin;
 	}
 	#bottom {
 		font-size: 14px;
-		font-family: 'Lusitana', serif;
+		font-family: 'Exo', sans-serif;
 	}
 	#head {
 		font-weight: normal;
 		font-size: 17px;
-		font-family: 'Lusitana', serif;
+		font-family: 'Exo', sans-serif;
 		margin-left: 10px; 
 	}
 	#bio {
 		font-weight: normal;
 		font-size: 14px;
-		font-family: 'Lusitana', serif;
+		font-family: 'Exo', sans-serif;
 	}
 	#plaintext { 
 		margin-left: 10px; 
