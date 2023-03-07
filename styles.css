@@ -1,31 +1,31 @@
-html, body {
-	margin: 0; 
-	height: 100vh; 
+html,
+body {
+	margin: 0;
+	height: 100vh;
 	overflow: hidden;
 	position: fixed;
 }
 
-#panel, .flip {
+#panel,
+.flip {
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	padding: 10px;
-	
+
 	background-color: transparent;
 	color: white;
-	width: 100%; 
+	width: 100%;
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
 	text-justify: inter-word;
-/* 
-	margin: auto; */
-  }
-  
-  #panel {
-	display: none;
-  }
+}
 
-  #head {
+#panel {
+	display: none;
+}
+
+#head {
 	font-weight: bold;
 	font-size: large;
 	font-family: 'Exo', sans-serif;
@@ -48,7 +48,7 @@ html, body {
 	position: absolute;
 	top: 10px;
 	width: 100%;
-	
+
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
@@ -63,7 +63,6 @@ html, body {
 	position: absolute;
 	bottom: 10px;
 	width: 100%;
-	
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
@@ -84,11 +83,11 @@ html, body {
 	color: #F7A8B8;
 	overflow-x: auto;
 	overflow-y: auto;
-	/* font-family: 'PT Serif', serif; */
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
 	text-justify: inter-word;
+	line-height: 150%;
 }
 
 .bio {
@@ -102,45 +101,49 @@ html, body {
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
-	text-justify: inter-word;
 	font-family: 'Exo', sans-serif;
 }
 
-@media only screen 
-and (max-device-width: 600px)
-{
+@media only screen and (max-device-width: 600px) {
 	#info {
 		font-size: 14px;
 		font-family: 'Exo', sans-serif;
 	}
+
 	#info2 {
 		font-size: 14px;
 		font-family: 'Exo', sans-serif;
 		width: 100vmin;
 	}
+
 	#bottom {
 		font-size: 14px;
 		font-family: 'Exo', sans-serif;
 	}
+
 	#head {
 		font-weight: normal;
 		font-size: 17px;
 		font-family: 'Exo', sans-serif;
-		margin-left: 10px; 
+		margin-left: 10px;
 	}
+
 	#bio {
 		font-weight: normal;
 		font-size: 14px;
 		font-family: 'Exo', sans-serif;
 	}
-	#plaintext { 
-		margin-left: 10px; 
+
+	#plaintext {
+		margin-left: 10px;
 	}
+
 	#work {
-		margin-left: 10px; 
+		margin-left: 10px;
 	}
+
 	.bio {
-		margin-left: 10px; 
+		margin-left: 10px;
 	}
 }
 
@@ -196,15 +199,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .inner-border::-webkit-scrollbar {
 	display: none;
 }
 
-.element::-webkit-scrollbar { width: 0 !important }
+.element::-webkit-scrollbar {
+	width: 0 !important
+}
 
-.element { overflow: -moz-scrollbars-none; }
+.element {
+	overflow: -moz-scrollbars-none;
+}
 
-.element { -ms-overflow-style: none; }
+.element {
+	-ms-overflow-style: none;
+}
