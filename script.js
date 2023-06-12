@@ -207,7 +207,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
-                window.location.href = "https://landing.oestrogeneration.org/";
+                window.location.href = "https://www.oestrogeneration.org/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
@@ -227,7 +227,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
-                window.location.href = "https://landing.oestrogeneration.org/";
+                window.location.href = "https://www.oestrogeneration.org/";
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
