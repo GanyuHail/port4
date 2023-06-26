@@ -6,7 +6,7 @@ let selectedObject = null;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
-        geometry, particleCount, sphereMesh,
+        geometry, particleCount, sphereMesh, vertex, vertices,
         i, h, color, size,
         materials = [],
         mouseX = 0,
