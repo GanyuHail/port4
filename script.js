@@ -41,7 +41,7 @@ let selectedObject = null;
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1.618);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
 
