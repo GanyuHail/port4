@@ -139,20 +139,20 @@
             </div>
             <div id="yerk">
                 <br><br>
-                <a href onclick=myFunction();>hide</a>
+                <a href onclick="document.getElementById('panel').style.display = 'none'";>hide</a>
             </div>
         </div>
 
         <script>
-            function myFunction() {
-                var x = document.getElementById("panel");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            };
-        </script>
+        //     function myFunction() {
+        //         var x = document.getElementById("panel");
+        //         if (x.style.display === "none") {
+        //             x.style.display = "block";
+        //         } else {
+        //             x.style.display = "none";
+        //         }
+        //     };
+        // </script>
 
 </body>
 <script type="module" src="./script.js"></script>
