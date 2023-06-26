@@ -181,7 +181,7 @@ let selectedObject = null;
                 selectedObject = null;
             }
 
-            raycaster.layers.set(1);
+            raycaster.layers.set(0);
             object.layers.enable(1);
 
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
