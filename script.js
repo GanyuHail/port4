@@ -80,7 +80,7 @@ let selectedObject = null;
         scene.add(sphereMesh4);
         sphereMesh4.position.set(-100, 130, 90);
 
-        const sphereGeometry5 = new THREE.SphereGeometry(50, 64, 32);
+        const sphereGeometry5 = new THREE.SphereGeometry(65, 64, 32);
         const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail//port4/main/src/oestroimg.png');
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
