@@ -181,6 +181,9 @@ let selectedObject = null;
                 selectedObject = null;
             }
 
+            raycaster.layers.set(1);
+            object.layers.enable(1);
+
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
 
@@ -283,7 +286,7 @@ let selectedObject = null;
 
     function onDocumentTouchEnd(e) {
         if (e.touches.length === 1) {
-            {passive:false}
+            { passive: false }
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
@@ -292,7 +295,7 @@ let selectedObject = null;
     function onDocumentTouchMove(e) {
         if (e.touches.length === 1) {
             e.preventDefault();
-            {passive:false}
+            { passive: false }
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
