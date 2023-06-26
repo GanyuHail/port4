@@ -36,6 +36,7 @@ let selectedObject = null;
         fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
+        camera.layers.enable(1);
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
@@ -182,7 +183,6 @@ let selectedObject = null;
             }
 
             raycaster.layers.set(0);
-            object.layers.enable(1);
 
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
