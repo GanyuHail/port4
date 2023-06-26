@@ -50,7 +50,7 @@ let selectedObject = null;
         document.body.style.margin = 0;
         document.body.style.overflow = 'visible';
 
-        geometry = new THREE.Geometry();
+        geometry = new THREE.BufferGeometry();
         particleCount = 9001;
 
         const sphereGeometry = new THREE.SphereGeometry(90, 64, 32);
