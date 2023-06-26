@@ -28,9 +28,9 @@ body {
 	text-justify: inter-word;
 }
 
-/* #panel {
-	display: none;
-} */
+#panel {
+	display: block;
+} 
 
 #head {
 	font-weight: bold;
