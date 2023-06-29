@@ -197,6 +197,10 @@ let selectedObject = null;
                     selectedObject = intersect.object;
                     intersect.object.material.color.set('hotpink');
                 }
+
+                // else if (intersect = null) {
+                //     selectedObject = null;
+                // }
             }
         };
 
@@ -289,6 +293,7 @@ let selectedObject = null;
             { passive: false }
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
+            selectedObject = null;
         }
     }
 
