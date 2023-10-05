@@ -93,7 +93,7 @@ let selectedObject = null;
         const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
         const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
         scene.add(sphereMesh6);
-        sphereMesh6.position.set(250, 155, -110);
+        sphereMesh6.position.set(250, 170, -110);
 
         const sphereGeometry7 = new THREE.SphereGeometry(60, 64, 32);
         const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
