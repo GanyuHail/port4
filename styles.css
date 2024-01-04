@@ -30,10 +30,10 @@ body {
 
 #panel {
 	display: block;
-} 
+}
 
 #head {
-	font-size: 2em;
+	font-size: 1.5em !important;
 	font-weight: bold;
 	font-size: large;
 	font-family: 'Exo', sans-serif;
@@ -44,7 +44,7 @@ body {
 }
 
 #work {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: bold;
 	font-family: 'Exo', sans-serif;
 	margin-left: 10%;
