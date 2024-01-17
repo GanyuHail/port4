@@ -240,14 +240,14 @@ body {
 	-ms-overflow-style: none;
 }
 
-
 .dropbtn {
-	background-color: #4CAF50;
+	background-color: #9dff00;
 	color: white;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
+	margin-left: 10%;
 }
 
 .dropdown {
