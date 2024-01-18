@@ -284,7 +284,7 @@ body {
 .dropdown {
 	position: relative;
 	display: block;
-	right: 0;
+	margin-left: 10%
 }
 
 .dropdown-content {
@@ -293,7 +293,7 @@ body {
 	background-color: magenta;
 	min-width: 160px;
 	z-index: 1;
-	right: 0;
+	margin-left: 10%
 }
 
 .dropdown-content a {
