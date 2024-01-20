@@ -295,7 +295,8 @@ body {
 	z-index: 1;
 	margin-left: 10%;
 	opacity: 0.8;
-	border-radius: 5em;
+	border-bottom-left-radius: 5em;
+	border-bottom-right-radius: 5em;
 }
 
 .dropdown-content a {
