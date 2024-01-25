@@ -208,7 +208,7 @@ let selectedObject = null;
             if (selectedObject === sphereMesh) {
                 myFunction();
             } else if (selectedObject === sphereMesh2) {
-                window.location.href = "https://ganyuhail.github.io/romancedemo/";
+                window.location.href = "https://ganyuhail.github.io/RomanceDemo/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
@@ -228,7 +228,7 @@ let selectedObject = null;
             if (selectedObject === sphereMesh) {
                 myFunction();
             } else if (selectedObject === sphereMesh2) {
-                window.location.href = "https://ganyuhail.github.io/romancedemo/";
+                window.location.href = "https://ganyuhail.github.io/RomanceDemo/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/ripple/";
             } else if (selectedObject === sphereMesh4) {
