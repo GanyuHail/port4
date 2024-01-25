@@ -295,8 +295,8 @@ body {
 	z-index: 1;
 	margin-left: 10%;
 	opacity: 0.8;
-	border-bottom-left-radius: 5em;
-	border-bottom-right-radius: 5em;
+	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
 }
 
 .dropdown-content a {
@@ -308,7 +308,7 @@ body {
 }
 
 .dropdown-content a:hover {
-	background-color: #f1f1f1
+	background-color: pink;
 }
 
 .dropdown:hover .dropdown-content {
