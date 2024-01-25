@@ -318,5 +318,7 @@ body {
 .dropdown:hover .dropbtn {
 	background-color: magenta;
 	opacity: 0.8;
-	border-radius: 2em;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-left-radius: 2em;
 }
