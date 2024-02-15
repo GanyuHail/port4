@@ -301,7 +301,8 @@ body {
 
 .dropdown-content a {
 	color: white;
-	padding: 12px 16px;
+	/* padding: 12px 16px; */
+	margin-left: 10%;
 	text-decoration: none;
 	display: block;
 	text-shadow: none;
