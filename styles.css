@@ -297,6 +297,8 @@ body {
 	opacity: 0.8;
 	border-bottom-left-radius: 2em;
 	border-bottom-right-radius: 2em;
+	border-top-right-radius: 2em;
+	border-top-left-radius: 2em;
 }
 
 .dropdown-content a {
@@ -312,6 +314,8 @@ body {
 	background-color: pink;
 	border-bottom-left-radius: 2em;
 	border-bottom-right-radius: 2em;
+	border-top-right-radius: 2em;
+	border-top-left-radius: 2em;
 }
 
 .dropdown:hover .dropdown-content {
@@ -321,7 +325,8 @@ body {
 .dropdown:hover .dropbtn {
 	background-color: magenta;
 	opacity: 0.8;
-	border-top-left-radius: 2em;
-	border-top-right-radius: 2em;
 	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-top-right-radius: 2em;
+	border-top-left-radius: 2em;
 }
