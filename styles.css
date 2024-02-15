@@ -309,6 +309,8 @@ body {
 
 .dropdown-content a:hover {
 	background-color: pink;
+	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
 }
 
 .dropdown:hover .dropdown-content {
