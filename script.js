@@ -266,7 +266,7 @@ let selectedObject = null;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
         // adjusts speed of camera zoom on load
-        camera.minDistance = 1000;
+        camera.minDistance = 10000;
         // minDistance edit
         camera.lookAt(scene.position);
 
