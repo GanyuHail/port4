@@ -264,7 +264,8 @@ let selectedObject = null;
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        camera.position.z += (mouseY - camera.position.z) * 0.002;
+        camera.position.z += (mouseY - camera.position.z) * 0.05;
+        // 0.002 to 0.05
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
