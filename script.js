@@ -25,7 +25,7 @@ let selectedObject = null;
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
 
-        fieldOfView = 75;
+        fieldOfView = 150; // was 75
         aspectRatio = WIDTH / HEIGHT;
         nearPlane = 20;
         farPlane = 3000;
