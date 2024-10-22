@@ -277,9 +277,21 @@ let selectedObject = null;
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
-        // adjusts speed of camera zoom on load
-        camera.position.z.minDistance = 10000;
-        // minDistance edit
+
+        // Define a minimum distance from the camera to the scene objects
+        const minDistance = 50; // Adjust this value based on your needs
+
+        // Calculate the distance between the camera and the scene's center (or target point)
+        const cameraPosition = camera.position.clone();
+        const distanceToCenter = cameraPosition.distanceTo(scene.position); // Distance to the scene center
+
+        // If the camera is closer than the minimum distance, adjust the camera position
+        if (distanceToCenter < minDistance) {
+            const direction = cameraPosition.sub(scene.position).normalize(); // Direction from scene to camera
+            camera.position.copy(direction.multiplyScalar(minDistance).add(scene.position)); // Move camera to min distance
+        }
+
+        // Make the camera look at the scene's center
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
@@ -309,7 +321,6 @@ let selectedObject = null;
             // Set the material color
             materials[i].color.copy(interpolatedColor);
         }
-
 
         renderer.render(scene, camera);
     }
