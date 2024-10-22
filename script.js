@@ -27,13 +27,13 @@ let selectedObject = null;
 
         fieldOfView = 120; // was 75
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 200; // was 20
+        nearPlane = 1; // this is render nearplane not camera nearplane. 
         farPlane = 3000;
 
-        cameraZ = farPlane / 2;
+        cameraZ = farPlane / 3; // was 2
 
-        fogHex = 0x000000;
-        fogDensity = 0.0007;
+        fogHex = 0xF7A8B8; // was 0x000000
+        fogDensity = 0.0005;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
         camera.layers.enable(1);
