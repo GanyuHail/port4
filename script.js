@@ -111,11 +111,11 @@ let selectedObject = null;
 
 
         const sphereGeometry9 = new THREE.SphereGeometry(120, 64, 32);
-        const sphereTex9 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
+        const sphereTex9 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/leaves.jpg');
         const sphereMaterial9 = new THREE.MeshStandardMaterial({ map: sphereTex9 });
         const sphereMesh9 = new THREE.Mesh(sphereGeometry9, sphereMaterial9);
         scene.add(sphereMesh9);
-        sphereMesh9.position.set(0, -100, -100);
+        sphereMesh9.position.set(-100, -100, -100);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -229,6 +229,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
+            } else if (selectedObject === sphereMesh9) {
+                window.location.href = "https://blossomprism.etsy.com";
             }
         };
 
@@ -249,6 +251,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/nb/";
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
+            } else if (selectedObject === sphereMesh9) {
+                window.location.href = "https://blossomprism.etsy.com";
             }
         };
 
