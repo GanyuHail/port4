@@ -37,7 +37,7 @@ let selectedObject = null;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
         camera.layers.enable(1);
-        camera.minDistance = 100;
+        camera.minDistance = 10000; // was 100
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
@@ -290,11 +290,27 @@ let selectedObject = null;
             }
         }
 
-        for (i = 0; i < materials.length; i++) {
-            color = parameters[i][0];
-            h = (360 * (color[0] + (time * 7)) % 360) / 360;
-            materials[i].color.setHSL(h, color[1], color[2]);
+        // for (i = 0; i < materials.length; i++) {
+        //     color = parameters[i][0];
+        //     h = (360 * (color[0] + (time * 7)) % 360) / 360;
+        //     materials[i].color.setHSL(h, color[1], color[2]);
+        // }
+        // Define HSL values for pink and light blue
+
+        const pink = new THREE.Color("hsl(330, 100%, 70%)");    // Pink (HSL: 330°, 100%, 70%)
+        const lightBlue = new THREE.Color("hsl(200, 100%, 70%)"); // Light Blue (HSL: 200°, 100%, 70%)
+
+        for (let i = 0; i < materials.length; i++) {
+            // Calculate interpolation factor (ranges between 0 and 1)
+            const blendFactor = (Math.sin(time * 2) + 1) / 2; // Smooth transition using sine wave
+
+            // Interpolate between pink and light blue
+            const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
+
+            // Set the material color
+            materials[i].color.copy(interpolatedColor);
         }
+
 
         renderer.render(scene, camera);
     }
