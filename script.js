@@ -32,12 +32,12 @@ let selectedObject = null;
 
         cameraZ = farPlane / 3; // was 2
 
-        fogHex = 0xF7A8B8; // was 0x000000
-        fogDensity = 0.0005;
+        fogHex = 0x000000;
+        fogDensity = 0.0006;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
         camera.layers.enable(1);
-        camera.minDistance = 10;
+        camera.minDistance = 100;
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
@@ -52,7 +52,7 @@ let selectedObject = null;
         document.body.style.overflow = 'visible';
 
         geometry = new THREE.Geometry();
-        particleCount = 5000;
+        particleCount = 4000;
 
         const sphereGeometry = new THREE.SphereGeometry(90, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
