@@ -279,7 +279,7 @@ let selectedObject = null;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
 
         // Define a minimum distance from the camera to the scene objects
-        const minDistance = 500; // Adjust this value based on your needs
+        const minDistance = 300; // Adjust this value based on your needs
 
         // Calculate the distance between the camera and the scene's center (or target point)
         const cameraPosition = camera.position.clone();
