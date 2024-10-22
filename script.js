@@ -30,7 +30,7 @@ let selectedObject = null;
         nearPlane = 1; // this is render nearplane not camera nearplane. 
         farPlane = 3000;
 
-        cameraZ = farPlane / 3; // was 2
+        cameraZ = farPlane / 2;
 
         fogHex = 0x000000;
         fogDensity = 0.0006;
@@ -279,7 +279,7 @@ let selectedObject = null;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
 
         // Define a minimum distance from the camera to the scene objects
-        const minDistance = 300; // Adjust this value based on your needs
+        const minDistance = 400; // Adjust this value based on your needs
 
         // Calculate the distance between the camera and the scene's center (or target point)
         const cameraPosition = camera.position.clone();
@@ -301,26 +301,25 @@ let selectedObject = null;
             }
         }
 
-        // for (i = 0; i < materials.length; i++) {
-        //     color = parameters[i][0];
-        //     h = (360 * (color[0] + (time * 7)) % 360) / 360;
-        //     materials[i].color.setHSL(h, color[1], color[2]);
-        // }
-        // Define HSL values for pink and light blue
-
-        const pink = new THREE.Color("hsl(330, 100%, 70%)");    // Pink (HSL: 330°, 100%, 70%)
-        const lightBlue = new THREE.Color("hsl(200, 100%, 70%)"); // Light Blue (HSL: 200°, 100%, 70%)
-
-        for (let i = 0; i < materials.length; i++) {
-            // Calculate interpolation factor (ranges between 0 and 1)
-            const blendFactor = (Math.sin(time * 2) + 1) / 2; // Smooth transition using sine wave
-
-            // Interpolate between pink and light blue
-            const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
-
-            // Set the material color
-            materials[i].color.copy(interpolatedColor);
+        for (i = 0; i < materials.length; i++) {
+            color = parameters[i][0];
+            h = (360 * (color[0] + (time * 7)) % 360) / 360;
+            materials[i].color.setHSL(h, color[1], color[2]);
         }
+
+        // const pink = new THREE.Color("hsl(330, 100%, 70%)");    // Pink (HSL: 330°, 100%, 70%)
+        // const lightBlue = new THREE.Color("hsl(200, 100%, 70%)"); // Light Blue (HSL: 200°, 100%, 70%)
+
+        // for (let i = 0; i < materials.length; i++) {
+        //     // Calculate interpolation factor (ranges between 0 and 1)
+        //     const blendFactor = (Math.sin(time * 2) + 1) / 2; // Smooth transition using sine wave
+
+        //     // Interpolate between pink and light blue
+        //     const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
+
+        //     // Set the material color
+        //     materials[i].color.copy(interpolatedColor);
+        // }
 
         renderer.render(scene, camera);
     }
