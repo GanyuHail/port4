@@ -25,9 +25,9 @@ let selectedObject = null;
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
 
-        fieldOfView = 150; // was 75
+        fieldOfView = 120; // was 75
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 20;
+        nearPlane = 200; // was 20
         farPlane = 3000;
 
         cameraZ = farPlane / 2;
@@ -108,6 +108,14 @@ let selectedObject = null;
         const sphereMesh8 = new THREE.Mesh(sphereGeometry8, sphereMaterial8);
         scene.add(sphereMesh8);
         sphereMesh8.position.set(0, 0, -100);
+
+
+        const sphereGeometry9 = new THREE.SphereGeometry(120, 64, 32);
+        const sphereTex9 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
+        const sphereMaterial9 = new THREE.MeshStandardMaterial({ map: sphereTex9 });
+        const sphereMesh9 = new THREE.Mesh(sphereGeometry9, sphereMaterial9);
+        scene.add(sphereMesh9);
+        sphereMesh9.position.set(0, -100, -100);
 
         for (i = 0; i < particleCount; i++) {
 
