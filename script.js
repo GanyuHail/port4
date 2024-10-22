@@ -37,7 +37,7 @@ let selectedObject = null;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
         camera.layers.enable(1);
-        camera.minDistance = 10000; // was 100
+        camera.z.minDistance = 10000; // was 100
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
