@@ -37,7 +37,6 @@ let selectedObject = null;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
         camera.layers.enable(1);
-        camera.z.minDistance = 10000; // was 100
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
@@ -279,7 +278,7 @@ let selectedObject = null;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
         // adjusts speed of camera zoom on load
-        camera.minDistance = 10000;
+        camera.position.z.minDistance = 10000;
         // minDistance edit
         camera.lookAt(scene.position);
 
