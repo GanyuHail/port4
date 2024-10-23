@@ -281,7 +281,7 @@ let selectedObject = null;
 
         // Define a minimum distance from the camera to the scene objects
         const minDistance = 400; // Adjust this value based on your needs
-        const lerpFactor = 0.1;  // Lerp factor for smooth transition (adjust as necessary)
+        const lerpFactor = 0.5;  // Lerp factor for smooth transition (adjust as necessary)
 
         // Calculate the distance between the camera and the scene's center (or target point)
         const cameraPosition = camera.position.clone();
