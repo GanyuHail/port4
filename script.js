@@ -274,55 +274,61 @@ let selectedObject = null;
     function render() {
         var time = Date.now() * 0.000005;
 
+        // Smooth camera movement based on mouse position
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
         camera.position.z += (mouseY - camera.position.z) * 0.0065;
 
         // Define a minimum distance from the camera to the scene objects
         const minDistance = 400; // Adjust this value based on your needs
+        const lerpFactor = 0.1;  // Lerp factor for smooth transition (adjust as necessary)
 
         // Calculate the distance between the camera and the scene's center (or target point)
         const cameraPosition = camera.position.clone();
         const distanceToCenter = cameraPosition.distanceTo(scene.position); // Distance to the scene center
 
-        // If the camera is closer than the minimum distance, adjust the camera position
+        // If the camera is closer than the minimum distance, smoothly adjust its position
         if (distanceToCenter < minDistance) {
             const direction = cameraPosition.sub(scene.position).normalize(); // Direction from scene to camera
-            camera.position.copy(direction.multiplyScalar(minDistance).add(scene.position)); // Move camera to min distance
+            const targetPosition = direction.multiplyScalar(minDistance).add(scene.position); // Target position at min distance
+
+            // Smoothly interpolate between current and target position
+            camera.position.lerp(targetPosition, lerpFactor);
         }
 
         // Make the camera look at the scene's center
         camera.lookAt(scene.position);
 
-        for (i = 0; i < scene.children.length; i++) {
+        // Rotate the objects in the scene
+        for (let i = 0; i < scene.children.length; i++) {
             var object = scene.children[i];
             if (object instanceof THREE.Points) {
                 object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
             }
         }
 
-        for (i = 0; i < materials.length; i++) {
-            color = parameters[i][0];
-            h = (360 * (color[0] + (time * 7)) % 360) / 360;
+        // Update materials' colors based on time
+        for (let i = 0; i < materials.length; i++) {
+            const color = parameters[i][0];
+            const h = (360 * (color[0] + (time * 7)) % 360) / 360;
             materials[i].color.setHSL(h, color[1], color[2]);
         }
 
-        // const pink = new THREE.Color("hsl(330, 100%, 70%)");    // Pink (HSL: 330°, 100%, 70%)
-        // const lightBlue = new THREE.Color("hsl(200, 100%, 70%)"); // Light Blue (HSL: 200°, 100%, 70%)
-
-        // for (let i = 0; i < materials.length; i++) {
-        //     // Calculate interpolation factor (ranges between 0 and 1)
-        //     const blendFactor = (Math.sin(time * 2) + 1) / 2; // Smooth transition using sine wave
-
-        //     // Interpolate between pink and light blue
-        //     const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
-
-        //     // Set the material color
-        //     materials[i].color.copy(interpolatedColor);
-        // }
+        // Optionally, you can use interpolated color blending code here if needed:
+        /*
+        const pink = new THREE.Color("hsl(330, 100%, 70%)");
+        const lightBlue = new THREE.Color("hsl(200, 100%, 70%)");
+    
+        for (let i = 0; i < materials.length; i++) {
+            const blendFactor = (Math.sin(time * 2) + 1) / 2;  // Smooth transition
+            const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
+            materials[i].color.copy(interpolatedColor);
+        }
+        */
 
         renderer.render(scene, camera);
     }
+
 
     function onDocumentMouseMove(e) {
         mouseX = e.clientX - windowHalfX;
