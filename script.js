@@ -281,7 +281,7 @@ let selectedObject = null;
 
         // Define a minimum distance from the camera to the scene objects
         const minDistance = 400; // Adjust this value based on your needs
-        const lerpFactor = 0.5;  // Lerp factor for smooth transition (adjust as necessary)
+        const lerpFactor = 0.01;  // Lerp factor for smooth transition (adjust as necessary) was 0.1
 
         // Calculate the distance between the camera and the scene's center (or target point)
         const cameraPosition = camera.position.clone();
@@ -318,7 +318,7 @@ let selectedObject = null;
         /*
         const pink = new THREE.Color("hsl(330, 100%, 70%)");
         const lightBlue = new THREE.Color("hsl(200, 100%, 70%)");
-    
+
         for (let i = 0; i < materials.length; i++) {
             const blendFactor = (Math.sin(time * 2) + 1) / 2;  // Smooth transition
             const interpolatedColor = pink.clone().lerp(lightBlue, blendFactor);
@@ -337,7 +337,7 @@ let selectedObject = null;
 
     function onDocumentTouchEnd(e) {
         if (e.touches.length === 1) {
-            { passive: false }
+            e.preventDefault();
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
@@ -346,7 +346,6 @@ let selectedObject = null;
     function onDocumentTouchMove(e) {
         if (e.touches.length === 1) {
             e.preventDefault();
-            { passive: false }
             mouseX = e.touches[0].pageX - windowHalfX;
             mouseY = e.touches[0].pageY - windowHalfY;
         }
