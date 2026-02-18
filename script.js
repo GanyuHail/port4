@@ -180,7 +180,7 @@ let selectedObject = null;
 
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
-        window.addEventListener('touchend', touchEnd);
+        window.addEventListener('touchend', onTouchRaycast);
         // window.addEventListener('touchcancel', touchCancel);
         // window.addEventListener('touchstart', touchStart);
 
@@ -235,25 +235,43 @@ let selectedObject = null;
         };
 
         function touchEnd(event) {
-            if (selectedObject === sphereMesh) {
-                myFunction();
-            } else if (selectedObject === sphereMesh2) {
-                window.location.href = "https://ganyuhail.github.io/RomanceDemo/";
-            } else if (selectedObject === sphereMesh3) {
-                window.location.href = "https://ganyuhail.github.io/ripple/";
-            } else if (selectedObject === sphereMesh4) {
-                window.location.href = "https://www.instagram.com/hennohail/?hl=en";
-            } else if (selectedObject === sphereMesh5) {
-                window.location.href = "https://www.oestrogeneration.org/";
-            } else if (selectedObject === sphereMesh6) {
-                window.location.href = "https://ganyuhail.github.io/mesmo1/";
-            } else if (selectedObject === sphereMesh7) {
-                window.location.href = "https://ganyuhail.github.io/nb/";
-            } else if (selectedObject === sphereMesh8) {
-                window.location.href = "https://ganyuhail.github.io/paintlines2/";
-            } else if (selectedObject === sphereMesh9) {
-                window.location.href = "https://blossomprism.etsy.com";
-            }
+            // Deprecated: replaced by onTouchRaycast for touch devices
+            // (kept for reference, but not used)
+                // Touch raycast handler for opening links on touch devices
+                function onTouchRaycast(event) {
+                    if (!event.changedTouches || event.changedTouches.length === 0) return;
+                    const touch = event.changedTouches[0];
+                    const x = (touch.clientX / window.innerWidth) * 2 - 1;
+                    const y = - (touch.clientY / window.innerHeight) * 2 + 1;
+                    raycaster.layers.set(0);
+                    pointer.x = x;
+                    pointer.y = y;
+                    raycaster.setFromCamera(pointer, camera);
+                    const intersects = raycaster.intersectObjects(scene.children, true);
+                    if (intersects.length > 0) {
+                        const obj = intersects[0].object;
+                        // Check which mesh was touched and open the corresponding link
+                        if (obj === sphereMesh) {
+                            myFunction();
+                        } else if (obj === sphereMesh2) {
+                            window.location.href = "https://ganyuhail.github.io/RomanceDemo/";
+                        } else if (obj === sphereMesh3) {
+                            window.location.href = "https://ganyuhail.github.io/ripple/";
+                        } else if (obj === sphereMesh4) {
+                            window.location.href = "https://www.instagram.com/hennohail/?hl=en";
+                        } else if (obj === sphereMesh5) {
+                            window.location.href = "https://www.oestrogeneration.org/";
+                        } else if (obj === sphereMesh6) {
+                            window.location.href = "https://ganyuhail.github.io/mesmo1/";
+                        } else if (obj === sphereMesh7) {
+                            window.location.href = "https://ganyuhail.github.io/nb/";
+                        } else if (obj === sphereMesh8) {
+                            window.location.href = "https://ganyuhail.github.io/paintlines2/";
+                        } else if (obj === sphereMesh9) {
+                            window.location.href = "https://blossomprism.etsy.com";
+                        }
+                    }
+                }
         };
 
         // function touchCancel(event) {
