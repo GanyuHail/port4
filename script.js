@@ -80,7 +80,7 @@ let selectedObject = null;
         sphereMesh3.position.set(10, -100, -20);
         // 4. Instagram
         const sphereGeometry4 = new THREE.SphereGeometry(12, 64, 32);
-        const sphereTex4 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/Instagram_logo_2016.svg.webp');
+        const sphereTex4 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/Instagram_logo_2016.svg.webp');
         const sphereMaterial4 = new THREE.MeshStandardMaterial({ map: sphereTex4 });
         const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
         scene.add(sphereMesh4);
@@ -94,14 +94,14 @@ let selectedObject = null;
         sphereMesh5.position.set(220, 125, -100);
         // 6. Mesmo
         const sphereGeometry6 = new THREE.SphereGeometry(30, 64, 32);
-        const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mesmo.png');
+        const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/mesmo.png');
         const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
         const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
         scene.add(sphereMesh6);
         sphereMesh6.position.set(250, 170, -110);
         // 7. WeOpMin
         const sphereGeometry7 = new THREE.SphereGeometry(60, 64, 32);
-        const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
+        const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/RecycleRabbit.png');
         const sphereMaterial7 = new THREE.MeshStandardMaterial({ map: sphereTex7 });
         const sphereMesh7 = new THREE.Mesh(sphereGeometry7, sphereMaterial7);
         scene.add(sphereMesh7);
@@ -165,8 +165,6 @@ let selectedObject = null;
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('touchend', onDocumentTouchEnd, false);
-
-
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
         window.addEventListener('touchend', onTouchRaycast);
@@ -208,7 +206,7 @@ let selectedObject = null;
             } else if (selectedObject === sphereMesh6) {
                 window.location.href = "https://ganyuhail.github.io/mesmo1/";
             } else if (selectedObject === sphereMesh7) {
-                window.location.href = "https://ganyuhail.github.io/nb/";
+                window.location.href = "https://ganyuhail.github.io/recyclerabbit/page.html";
             } else if (selectedObject === sphereMesh8) {
                 window.location.href = "https://ganyuhail.github.io/paintlines2/";
             } else if (selectedObject === sphereMesh9) {
