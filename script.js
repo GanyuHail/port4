@@ -54,7 +54,7 @@ let selectedObject = null;
 
         // --- Particle Geometry ---
         geometry = new THREE.Geometry();
-        particleCount = 4000;
+        particleCount = 2000;
 
         // --- Spheres with Textures (Clickable/Touchable) ---
         // 1. Moon
