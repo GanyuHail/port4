@@ -54,72 +54,47 @@ let selectedObject = null;
 
         // --- Particle Geometry ---
         geometry = new THREE.Geometry();
-        particleCount = 2000;
+        particleCount = 1000; // Reduce for faster load
 
         // --- Spheres with Textures (Clickable/Touchable) ---
-        // 1. Moon
-        const sphereGeometry = new THREE.SphereGeometry(30, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
-        const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
-        const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        scene.add(sphereMesh);
-        sphereMesh.position.set(80, 50, 200);
-        // 2. Romance
-        const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 32);
-        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/romance.png');
-        const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
-        const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
-        scene.add(sphereMesh2);
-        sphereMesh2.position.set(-50, 100, 50);
-        // 3. Ripple
-        const sphereGeometry3 = new THREE.SphereGeometry(24, 64, 32);
-        const sphereTex3 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/ripple.png');
-        const sphereMaterial3 = new THREE.MeshStandardMaterial({ map: sphereTex3 });
-        const sphereMesh3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
-        scene.add(sphereMesh3);
-        sphereMesh3.position.set(10, -100, -20);
-        // 4. Instagram
-        const sphereGeometry4 = new THREE.SphereGeometry(12, 64, 32);
-        const sphereTex4 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/Instagram_logo_2016.svg.webp');
-        const sphereMaterial4 = new THREE.MeshStandardMaterial({ map: sphereTex4 });
-        const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
-        scene.add(sphereMesh4);
-        sphereMesh4.position.set(-100, 130, 90);
-        // 5. Oestroalt2
-        const sphereGeometry5 = new THREE.SphereGeometry(60, 64, 32);
-        const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail//port4/main/src/oestroalt2.png');
-        const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
-        const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
-        scene.add(sphereMesh5);
-        sphereMesh5.position.set(220, 125, -100);
-        // 6. Mesmo
-        const sphereGeometry6 = new THREE.SphereGeometry(30, 64, 32);
-        const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/mesmo.png');
-        const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
-        const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
-        scene.add(sphereMesh6);
-        sphereMesh6.position.set(250, 170, -110);
-        // 7. WeOpMin
-        const sphereGeometry7 = new THREE.SphereGeometry(60, 64, 32);
-        const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/RecycleRabbit.png');
-        const sphereMaterial7 = new THREE.MeshStandardMaterial({ map: sphereTex7 });
-        const sphereMesh7 = new THREE.Mesh(sphereGeometry7, sphereMaterial7);
-        scene.add(sphereMesh7);
-        sphereMesh7.position.set(200, -20, -70);
-        // 8. Paintlines2
-        const sphereGeometry8 = new THREE.SphereGeometry(50, 64, 32);
-        const sphereTex8 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png');
-        const sphereMaterial8 = new THREE.MeshStandardMaterial({ map: sphereTex8 });
-        const sphereMesh8 = new THREE.Mesh(sphereGeometry8, sphereMaterial8);
-        scene.add(sphereMesh8);
-        sphereMesh8.position.set(0, 0, -100);
-        // 9. Leaves
-        const sphereGeometry9 = new THREE.SphereGeometry(120, 64, 32);
-        const sphereTex9 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port4/main/src/leaves.jpg');
-        const sphereMaterial9 = new THREE.MeshStandardMaterial({ map: sphereTex9 });
-        const sphereMesh9 = new THREE.Mesh(sphereGeometry9, sphereMaterial9);
-        scene.add(sphereMesh9);
-        sphereMesh9.position.set(-100, -100, -100);
+        // Use lower segment counts for faster geometry creation
+        const sphereParams = [
+            { size: 30, url: 'https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg', pos: [80, 50, 200] },
+            { size: 40, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/romance.png', pos: [-50, 100, 50] },
+            { size: 24, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/ripple.png', pos: [10, -100, -20] },
+            { size: 12, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/Instagram_logo_2016.svg.webp', pos: [-100, 130, 90] },
+            { size: 60, url: 'https://raw.githubusercontent.com/GanyuHail//port4/main/src/oestroalt2.png', pos: [220, 125, -100] },
+            { size: 30, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/mesmo.png', pos: [250, 170, -110] },
+            { size: 60, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/RecycleRabbit.png', pos: [200, -20, -70] },
+            { size: 50, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/lines.png', pos: [0, 0, -100] },
+            { size: 120, url: 'https://raw.githubusercontent.com/GanyuHail/port4/main/src/leaves.jpg', pos: [-100, -100, -100] },
+        ];
+        // Preload all textures, then add spheres
+        const loader = new THREE.TextureLoader();
+        const sphereMeshes = [];
+        let loaded = 0;
+        for (let idx = 0; idx < sphereParams.length; idx++) {
+            loader.load(sphereParams[idx].url, function (tex) {
+                const geo = new THREE.SphereGeometry(sphereParams[idx].size, 24, 16); // Lower segments
+                const mat = new THREE.MeshStandardMaterial({ map: tex });
+                const mesh = new THREE.Mesh(geo, mat);
+                mesh.position.set(...sphereParams[idx].pos);
+                scene.add(mesh);
+                sphereMeshes[idx] = mesh;
+                loaded++;
+            });
+        }
+        // Assign sphereMesh, sphereMesh2, ... for compatibility with event handlers
+        var sphereMesh, sphereMesh2, sphereMesh3, sphereMesh4, sphereMesh5, sphereMesh6, sphereMesh7, sphereMesh8, sphereMesh9;
+        loader.load(sphereParams[0].url, function (tex) { sphereMesh = sphereMeshes[0]; });
+        loader.load(sphereParams[1].url, function (tex) { sphereMesh2 = sphereMeshes[1]; });
+        loader.load(sphereParams[2].url, function (tex) { sphereMesh3 = sphereMeshes[2]; });
+        loader.load(sphereParams[3].url, function (tex) { sphereMesh4 = sphereMeshes[3]; });
+        loader.load(sphereParams[4].url, function (tex) { sphereMesh5 = sphereMeshes[4]; });
+        loader.load(sphereParams[5].url, function (tex) { sphereMesh6 = sphereMeshes[5]; });
+        loader.load(sphereParams[6].url, function (tex) { sphereMesh7 = sphereMeshes[6]; });
+        loader.load(sphereParams[7].url, function (tex) { sphereMesh8 = sphereMeshes[7]; });
+        loader.load(sphereParams[8].url, function (tex) { sphereMesh9 = sphereMeshes[8]; });
 
         // --- Particle Field ---
         for (i = 0; i < particleCount; i++) {
