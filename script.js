@@ -79,6 +79,10 @@ let selectedObject = null;
                 const mat = new THREE.MeshStandardMaterial({ map: tex });
                 const mesh = new THREE.Mesh(geo, mat);
                 mesh.position.set(...sphereParams[idx].pos);
+                // Rotate sphere 7 (RecycleRabbit) by 90 degrees clockwise around Y axis
+                if (idx === 6) {
+                    mesh.rotation.y = -Math.PI / 2; // 90 degrees clockwise
+                }
                 scene.add(mesh);
                 sphereMeshes[idx] = mesh;
                 loaded++;
